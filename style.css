@@ -1,0 +1,1667 @@
+/* =========================================================
+RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* =========================================================
+HTML / BODY
+========================================================= */
+
+html {
+width: 100%;
+min-height: 100%;
+}
+
+body {
+width: 100%;
+min-height: 100vh;
+
+
+overflow-x: hidden;
+
+font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+color: #ffffff;
+
+background: #02030a;
+
+
+}
+
+/* =========================================================
+SPACE BACKGROUND
+========================================================= */
+
+.space-background {
+position: fixed;
+
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+overflow: hidden;
+
+z-index: -10;
+
+background:
+    radial-gradient(
+        circle at 50% 45%,
+        rgba(70, 90, 180, 0.20),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 20% 80%,
+        rgba(255, 120, 0, 0.10),
+        transparent 30%
+    ),
+
+    #02030a;
+
+transition:
+    transform 0.15s ease-out;
+
+
+}
+
+/* =========================================================
+PNG BACKGROUND
+========================================================= */
+
+.background-image {
+position: absolute;
+
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+background-image:
+    url("assets/LOGO\ PGRAJA.png");
+
+background-size: cover;
+
+background-position:
+    center center;
+
+background-repeat:
+    no-repeat;
+
+z-index: 0;
+
+pointer-events: none;
+
+
+}
+
+/* =========================================================
+BACKGROUND OVERLAY
+========================================================= */
+
+.background-overlay {
+position: absolute;
+
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+background:
+    linear-gradient(
+        180deg,
+
+        rgba(0, 0, 0, 0.15) 0%,
+
+        rgba(0, 0, 0, 0.05) 40%,
+
+        rgba(0, 0, 0, 0.40) 100%
+    );
+
+z-index: 1;
+
+pointer-events: none;
+
+
+}
+
+/* =========================================================
+STARS
+========================================================= */
+
+.stars {
+position: absolute;
+
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+background-repeat: repeat;
+
+pointer-events: none;
+
+z-index: 2;
+
+
+}
+
+/* STAR LAYER 1 */
+
+.stars-1 {
+
+
+opacity: 0.90;
+
+background-image:
+
+    radial-gradient(
+        2px 2px at 10% 20%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 30% 80%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 50% 40%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 70% 15%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 90% 70%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 25% 50%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 80% 30%,
+        #ffffff,
+        transparent
+    );
+
+background-size:
+    350px 350px;
+
+animation:
+    starsMove1 25s linear infinite;
+
+
+}
+
+/* STAR LAYER 2 */
+
+.stars-2 {
+
+
+opacity: 0.60;
+
+background-image:
+
+    radial-gradient(
+        1px 1px at 15% 35%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 40% 10%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 65% 65%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 85% 30%,
+        #ffffff,
+        transparent
+    );
+
+background-size:
+    250px 250px;
+
+animation:
+    starsMove2 40s linear infinite;
+
+
+}
+
+/* STAR LAYER 3 */
+
+.stars-3 {
+
+
+opacity: 0.40;
+
+background-image:
+
+    radial-gradient(
+        2px 2px at 20% 60%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        1px 1px at 55% 25%,
+        #ffffff,
+        transparent
+    ),
+
+    radial-gradient(
+        2px 2px at 80% 80%,
+        #ffffff,
+        transparent
+    );
+
+background-size:
+    500px 500px;
+
+animation:
+    starsMove3 60s linear infinite;
+
+
+}
+
+/* STAR ANIMATION */
+
+@keyframes starsMove1 {
+
+
+from {
+    transform:
+        translateY(0);
+}
+
+to {
+    transform:
+        translateY(-350px);
+}
+
+
+}
+
+@keyframes starsMove2 {
+
+
+from {
+    transform:
+        translateY(0);
+}
+
+to {
+    transform:
+        translateY(-250px);
+}
+
+
+}
+
+@keyframes starsMove3 {
+
+
+from {
+    transform:
+        translateY(0);
+}
+
+to {
+    transform:
+        translateY(-500px);
+}
+
+
+}
+
+/* =========================================================
+PARTICLES
+========================================================= */
+
+#particles {
+
+
+position: absolute;
+
+inset: 0;
+
+width: 100%;
+height: 100%;
+
+overflow: hidden;
+
+pointer-events: none;
+
+z-index: 3;
+
+
+}
+
+.particle {
+
+
+position: absolute;
+
+bottom: -10px;
+
+border-radius: 50%;
+
+background:
+    #ffffff;
+
+box-shadow:
+    0 0 8px #ffffff;
+
+opacity: 0;
+
+animation:
+    particleFloat linear infinite;
+
+
+}
+
+@keyframes particleFloat {
+
+
+0% {
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        );
+
+    opacity: 0;
+}
+
+
+10% {
+
+    opacity: 1;
+}
+
+
+50% {
+
+    transform:
+        translate3d(
+            var(--random-x),
+            -55vh,
+            0
+        );
+
+    opacity: 0.8;
+}
+
+
+90% {
+
+    opacity: 0.5;
+}
+
+
+100% {
+
+    transform:
+        translate3d(
+            calc(var(--random-x) * -1),
+            -120vh,
+            0
+        );
+
+    opacity: 0;
+}
+
+
+}
+
+/* =========================================================
+ASTEROID
+========================================================= */
+
+.asteroid {
+
+
+position: absolute;
+
+border-radius: 50%;
+
+background:
+    radial-gradient(
+        circle at 30% 30%,
+        #b0b0b0 0%,
+        #696969 35%,
+        #292929 70%,
+        #101010 100%
+    );
+
+box-shadow:
+
+    inset
+    -12px
+    -12px
+    20px
+    rgba(0, 0, 0, 0.75),
+
+    0 0 20px
+    rgba(255, 255, 255, 0.08);
+
+pointer-events: none;
+
+z-index: 4;
+
+
+}
+
+/* ASTEROID CRATERS */
+
+.asteroid::before {
+
+
+content: "";
+
+position: absolute;
+
+width: 20%;
+height: 20%;
+
+top: 25%;
+left: 25%;
+
+border-radius: 50%;
+
+background:
+    #202020;
+
+box-shadow:
+    20px 15px 0 #303030,
+    -10px 25px 0 #252525;
+
+
+}
+
+.asteroid::after {
+
+
+content: "";
+
+position: absolute;
+
+width: 13%;
+height: 13%;
+
+top: 60%;
+left: 65%;
+
+border-radius: 50%;
+
+background:
+    #181818;
+
+
+}
+
+/* ASTEROID 1 */
+
+.asteroid-1 {
+
+
+width: 90px;
+height: 90px;
+
+top: 10%;
+left: -120px;
+
+animation:
+    asteroidFly1
+    14s
+    linear
+    infinite;
+
+
+}
+
+/* ASTEROID 2 */
+
+.asteroid-2 {
+
+
+width: 55px;
+height: 55px;
+
+top: 65%;
+left: -80px;
+
+animation:
+    asteroidFly2
+    19s
+    linear
+    infinite;
+
+animation-delay:
+    5s;
+
+
+}
+
+/* ASTEROID 3 */
+
+.asteroid-3 {
+
+
+width: 35px;
+height: 35px;
+
+top: 30%;
+left: -60px;
+
+animation:
+    asteroidFly3
+    11s
+    linear
+    infinite;
+
+animation-delay:
+    3s;
+
+
+}
+
+/* ASTEROID ANIMATION */
+
+@keyframes asteroidFly1 {
+
+
+0% {
+
+    transform:
+        translate(
+            -10vw,
+            0
+        )
+        rotate(0deg);
+}
+
+
+100% {
+
+    transform:
+        translate(
+            120vw,
+            50vh
+        )
+        rotate(720deg);
+}
+
+
+}
+
+@keyframes asteroidFly2 {
+
+
+0% {
+
+    transform:
+        translate(
+            -10vw,
+            0
+        )
+        rotate(0deg);
+}
+
+
+100% {
+
+    transform:
+        translate(
+            120vw,
+            -30vh
+        )
+        rotate(-600deg);
+}
+
+
+}
+
+@keyframes asteroidFly3 {
+
+
+0% {
+
+    transform:
+        translate(
+            -10vw,
+            0
+        )
+        rotate(0deg);
+}
+
+
+100% {
+
+    transform:
+        translate(
+            120vw,
+            30vh
+        )
+        rotate(900deg);
+}
+
+
+}
+
+/* =========================================================
+LIGHTNING
+========================================================= */
+
+.lightning {
+
+
+position: absolute;
+
+top: -10%;
+
+width: 8px;
+
+height: 80%;
+
+opacity: 0;
+
+background:
+    #ffffff;
+
+filter:
+
+    drop-shadow(
+        0 0 5px #ffffff
+    )
+
+    drop-shadow(
+        0 0 15px #79aaff
+    )
+
+    drop-shadow(
+        0 0 35px #478cff
+    );
+
+clip-path:
+    polygon(
+        55% 0%,
+        100% 0%,
+        62% 35%,
+        85% 35%,
+        20% 100%,
+        40% 50%,
+        15% 50%
+    );
+
+pointer-events: none;
+
+z-index: 5;
+
+
+}
+
+/* LIGHTNING 1 */
+
+.lightning-1 {
+
+
+left: 20%;
+
+transform:
+    rotate(18deg);
+
+animation:
+    lightningStrike
+    7s
+    infinite;
+
+
+}
+
+/* LIGHTNING 2 */
+
+.lightning-2 {
+
+
+left: 75%;
+
+transform:
+    rotate(-20deg);
+
+animation:
+    lightningStrike
+    11s
+    infinite;
+
+animation-delay:
+    4s;
+
+
+}
+
+/* LIGHTNING ANIMATION */
+
+@keyframes lightningStrike {
+
+
+0%,
+88%,
+100% {
+
+    opacity: 0;
+}
+
+
+89% {
+
+    opacity: 1;
+}
+
+
+90% {
+
+    opacity: 0;
+}
+
+
+91% {
+
+    opacity: 1;
+}
+
+
+92% {
+
+    opacity: 0;
+}
+
+
+93% {
+
+    opacity: 0.8;
+}
+
+
+94% {
+
+    opacity: 0;
+}
+
+
+}
+
+/* =========================================================
+MAIN CONTAINER
+========================================================= */
+
+.container {
+
+
+position: relative;
+
+width: 100%;
+
+min-height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+padding:
+
+    50px
+    20px
+    40px;
+
+
+}
+
+/* =========================================================
+LOGO
+========================================================= */
+
+.logo-wrapper {
+
+
+width:
+    min(
+        80vw,
+        650px
+    );
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+animation:
+    logoBounce
+    3s
+    ease-in-out
+    infinite;
+
+
+}
+
+.main-logo {
+
+
+display: block;
+
+width: 100%;
+
+max-width: 650px;
+
+height: auto;
+
+object-fit: contain;
+
+filter:
+
+    drop-shadow(
+        0 0 10px
+        rgba(255, 255, 255, 0.30)
+    )
+
+    drop-shadow(
+        0 0 30px
+        rgba(255, 130, 0, 0.30)
+    );
+
+
+}
+
+/* LOGO BOUNCE */
+
+@keyframes logoBounce {
+
+
+0%,
+100% {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+50% {
+
+    transform:
+        translateY(-18px)
+        scale(1.025);
+}
+
+
+}
+
+/* =========================================================
+BUTTON AREA
+========================================================= */
+
+.button-area {
+
+
+width:
+    min(
+        800px,
+        95vw
+    );
+
+display:
+    grid;
+
+grid-template-columns:
+    1fr 1fr;
+
+gap:
+    30px;
+
+margin-top:
+    20px;
+
+
+}
+
+.button-column {
+
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+gap:
+    18px;
+
+
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.space-button {
+
+
+position: relative;
+
+display:
+    flex;
+
+justify-content:
+    center;
+
+align-items:
+    center;
+
+min-height:
+    65px;
+
+padding:
+    10px 20px;
+
+color:
+    #ffffff;
+
+text-decoration:
+    none;
+
+font-size:
+    clamp(
+        16px,
+        2vw,
+        23px
+    );
+
+font-weight:
+    900;
+
+letter-spacing:
+    2px;
+
+border:
+    2px solid
+    rgba(
+        255,
+        142,
+        30,
+        0.90
+    );
+
+border-radius:
+    14px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(255, 115, 0, 0.25),
+        rgba(15, 20, 50, 0.85)
+    );
+
+box-shadow:
+
+    0 0 8px
+    rgba(
+        255,
+        120,
+        0,
+        0.70
+    ),
+
+    0 0 25px
+    rgba(
+        255,
+        100,
+        0,
+        0.25
+    ),
+
+    inset
+    0 0 15px
+    rgba(
+        255,
+        120,
+        0,
+        0.10
+    );
+
+backdrop-filter:
+    blur(5px);
+
+overflow:
+    hidden;
+
+animation:
+    buttonBounce
+    2.8s
+    ease-in-out
+    infinite;
+
+transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+
+
+}
+
+/* BUTTON SHINE */
+
+.space-button::before {
+
+
+content:
+    "";
+
+position:
+    absolute;
+
+top:
+    0;
+
+left:
+    -120%;
+
+width:
+    80%;
+
+height:
+    100%;
+
+background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        ),
+        transparent
+    );
+
+transform:
+    skewX(-20deg);
+
+animation:
+    buttonShine
+    3.5s
+    infinite;
+
+
+}
+
+/* BUTTON TEXT */
+
+.space-button span {
+
+
+position:
+    relative;
+
+z-index:
+    2;
+
+
+}
+
+/* BUTTON BOUNCE */
+
+@keyframes buttonBounce {
+
+
+0%,
+100% {
+
+    transform:
+        translateY(0);
+}
+
+
+50% {
+
+    transform:
+        translateY(-7px);
+}
+
+
+}
+
+/* BUTTON SHINE */
+
+@keyframes buttonShine {
+
+
+0% {
+
+    left:
+        -120%;
+}
+
+
+45%,
+100% {
+
+    left:
+        140%;
+}
+
+
+}
+
+/* =========================================================
+BUTTON HOVER
+========================================================= */
+
+.space-button:hover {
+
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(
+            255,
+            145,
+            0,
+            0.65
+        ),
+        rgba(
+            25,
+            30,
+            70,
+            0.95
+        )
+    );
+
+box-shadow:
+
+    0 0 12px
+    rgba(
+        255,
+        150,
+        30,
+        1
+    ),
+
+    0 0 35px
+    rgba(
+        255,
+        100,
+        0,
+        0.60
+    ),
+
+    0 0 70px
+    rgba(
+        255,
+        100,
+        0,
+        0.25
+    );
+
+animation:
+    buttonShake
+    0.35s
+    ease-in-out
+    infinite;
+
+
+}
+
+/* BUTTON SHAKE */
+
+@keyframes buttonShake {
+
+
+0% {
+
+    transform:
+        translate(0, 0)
+        rotate(0deg);
+}
+
+
+20% {
+
+    transform:
+        translate(-3px, 2px)
+        rotate(-1deg);
+}
+
+
+40% {
+
+    transform:
+        translate(3px, -2px)
+        rotate(1deg);
+}
+
+
+60% {
+
+    transform:
+        translate(-2px, -1px)
+        rotate(-1deg);
+}
+
+
+80% {
+
+    transform:
+        translate(2px, 1px)
+        rotate(1deg);
+}
+
+
+100% {
+
+    transform:
+        translate(0, 0)
+        rotate(0deg);
+}
+
+
+}
+
+/* =========================================================
+NOTE BOX
+========================================================= */
+
+.note-box {
+
+
+width:
+    fit-content;
+
+max-width:
+    min(
+        850px,
+        92vw
+    );
+
+margin-top:
+    45px;
+
+padding:
+    18px 25px;
+
+border:
+    2px solid
+    #ff8a18;
+
+border-radius:
+    15px;
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(
+            45,
+            25,
+            10,
+            0.82
+        ),
+        rgba(
+            8,
+            12,
+            28,
+            0.92
+        )
+    );
+
+box-shadow:
+
+    0 0 8px
+    rgba(
+        255,
+        130,
+        20,
+        0.90
+    ),
+
+    0 0 25px
+    rgba(
+        255,
+        100,
+        0,
+        0.45
+    ),
+
+    0 0 55px
+    rgba(
+        255,
+        100,
+        0,
+        0.20
+    ),
+
+    inset
+    0 0 20px
+    rgba(
+        255,
+        120,
+        0,
+        0.08
+    );
+
+backdrop-filter:
+    blur(8px);
+
+text-align:
+    center;
+
+animation:
+    noteBounce
+    3.2s
+    ease-in-out
+    infinite;
+
+
+}
+
+/* NOTE TITLE */
+
+.note-title {
+
+
+display:
+    flex;
+
+justify-content:
+    center;
+
+align-items:
+    center;
+
+gap:
+    7px;
+
+margin-bottom:
+    8px;
+
+color:
+    #ff9b35;
+
+font-size:
+    20px;
+
+font-weight:
+    900;
+
+letter-spacing:
+    2px;
+
+text-shadow:
+
+    0 0 8px
+    rgba(
+        255,
+        130,
+        20,
+        0.90
+    );
+
+
+}
+
+/* NOTE CONTENT */
+
+.note-content {
+
+
+color:
+    #eeeeee;
+
+font-size:
+    14px;
+
+line-height:
+    1.6;
+
+word-wrap:
+    break-word;
+
+
+}
+
+/* NOTE BOUNCE */
+
+@keyframes noteBounce {
+
+
+0%,
+100% {
+
+    transform:
+        translateY(0);
+}
+
+
+50% {
+
+    transform:
+        translateY(-8px);
+}
+
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+
+.container {
+
+    padding-top:
+        35px;
+
+    padding-left:
+        15px;
+
+    padding-right:
+        15px;
+}
+
+
+.logo-wrapper {
+
+    width:
+        90vw;
+}
+
+
+.button-area {
+
+    width:
+        94vw;
+
+    gap:
+        12px;
+}
+
+
+.button-column {
+
+    gap:
+        12px;
+}
+
+
+.space-button {
+
+    min-height:
+        55px;
+
+    padding:
+        8px 10px;
+
+    border-radius:
+        11px;
+
+    font-size:
+        15px;
+
+    letter-spacing:
+        1px;
+}
+
+
+.note-box {
+
+    max-width:
+        94vw;
+
+    margin-top:
+        30px;
+
+    padding:
+        15px 18px;
+}
+
+
+.note-content {
+
+    font-size:
+        13px;
+}
+
+
+.note-title {
+
+    font-size:
+        17px;
+}
+
+
+.asteroid-1 {
+
+    width:
+        60px;
+
+    height:
+        60px;
+}
+
+
+}
+
+/* =========================================================
+VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+.container {
+
+    padding-top:
+        25px;
+}
+
+
+.logo-wrapper {
+
+    width:
+        92vw;
+}
+
+
+.button-area {
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+        12px;
+}
+
+
+.button-column {
+
+    gap:
+        12px;
+}
+
+
+.space-button {
+
+    min-height:
+        52px;
+}
+
+
+.note-box {
+
+    margin-top:
+        25px;
+}
+
+
+}
+
+/* =========================================================
+REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+*,
+*::before,
+*::after {
+
+    animation-duration:
+        0.01ms !important;
+
+    animation-iteration-count:
+        1 !important;
+
+    scroll-behavior:
+        auto !important;
+}
+
+
+}
